@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bhryany Nyt — Portfolio</title>
+  <meta name="description" content="Bhryany Nyt — UI/UX Designer & Developer. Portfolio with modern features." />
+  <!-- SEO & Open Graph -->
+  <meta property="og:title" content="Bhryany Nyt — Portfolio" />
+  <meta property="og:description" content="UI/UX Designer & Developer. Case studies, services, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="assets/images/project1.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="theme-color" content="#4f46e5">
+  <!-- Analytics placeholder -->
+  <script>
+    // Replace 'G-XXXX' with your Google Analytics ID
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // gtag('config', 'G-XXXX');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bhryany Nyt",
+    "url": "https://example.com",
+    "sameAs": ["https://linkedin.com","https://github.com"],
+    "jobTitle": "UI/UX Designer & Developer",
+    "worksFor": {"@type":"Organization","name":"Self-Employed"}
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Bhryany Nyt</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌗</button>
+        <button class="btn btn-primary" id="hire-btn">Hire Me</button>
+        <button id="lang-toggle" aria-label="Toggle language">ES</button>
+      </div>
+      <button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <a href="#projects">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-left" data-aos="fade-right">
+        <h1 id="hero-title">I design websites<br><span class="accent">that convert.</span></h1>
+        <p class="lead">UI/UX Designer & Developer turning ideas into digital products that drive results.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">See My Work</a>
+          <a class="btn btn-outline" href="#contact">Let's Talk</a>
+          <a class="btn btn-ghost" href="assets/pdf/resume.pdf" download>Download Resume</a>
+        </div>
+        <div class="meta-row">
+          <span id="greeting"></span> • <a href="#contact">Book a call</a>
+        </div>
+      </div>
+      <div class="hero-right" data-aos="fade-left">
+        <div class="portrait">
+          <img src="assets/images/profile.jpg" alt="Bhryany Nyt portrait">
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container" aria-labelledby="projects-title">
+      <div class="section-head" data-aos="fade-up">
+        <h2 id="projects-title">Featured Projects</h2>
+        <p class="muted">Hand-picked case studies showing process and outcomes.</p>
+      </div>
+      <div class="filters" data-aos="fade-up">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="mobile">Mobile</button>
+        <button class="filter" data-filter="ai">AI</button>
+      </div>
+      <div class="grid projects-grid" id="projects-grid" data-aos="fade-up">
+        <!-- Project cards -->
+        <article class="project card" data-cats="web,ai">
+          <img src="assets/images/project1.jpg" loading="lazy" alt="Project 1">
+          <div class="card-body">
+            <h3>Project One</h3>
+            <p class="muted">E-commerce redesign with measurable conversion uplift.</p>
+            <p class="ai-summary">AI summary: <span class="summary">Fast checkout, clearer hierarchy.</span></p>
+            <a class="link" href="#">View case study →</a>
+          </div>
+        </article>
+
+        <article class="project card" data-cats="web,mobile">
+          <img src="assets/images/project2.jpg" loading="lazy" alt="Project 2">
+          <div class="card-body">
+            <h3>Project Two</h3>
+            <p class="muted">SaaS landing & marketing flow optimized for SEO.</p>
+            <p class="ai-summary">AI summary: <span class="summary">Improved onboarding flow.</span></p>
+            <a class="link" href="#">View case study →</a>
+          </div>
+        </article>
+
+        <article class="project card" data-cats="mobile">
+          <img src="assets/images/project3.jpg" loading="lazy" alt="Project 3">
+          <div class="card-body">
+            <h3>Project Three</h3>
+            <p class="muted">Mobile app with accessible patterns and high retention.</p>
+            <p class="ai-summary">AI summary: <span class="summary">Clear tasks & microcopy.</span></p>
+            <a class="link" href="#">View case study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section container" data-aos="fade-up">
+      <div class="about-grid">
+        <figure class="about-photo">
+          <img src="assets/images/profile.jpg" alt="Portrait">
+        </figure>
+        <div class="about-copy">
+          <h2>The person behind the work</h2>
+          <p class="muted">I design with empathy, code with purpose, and deliver with impact.</p>
+          <div class="timeline">
+            <div><strong>2022-Present:</strong> Freelance Product Designer & Frontend Dev</div>
+            <div><strong>2020-2022:</strong> UI/UX at GrowthFinch</div>
+            <div><strong>2018-2020:</strong> BSc Computer Science</div>
+          </div>
+          <p class="fun">When I'm not designing, you'll find me hiking and shooting photos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section container" data-aos="fade-up">
+      <h2>What I do</h2>
+      <div class="grid cards-4">
+        <div class="svc card">
+          <div class="icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p class="muted">Wireframes, prototypes, design systems.</p>
+        </div>
+        <div class="svc card">
+          <div class="icon">💻</div>
+          <h3>Frontend Dev</h3>
+          <p class="muted">React, Next.js, performance-first.</p>
+        </div>
+        <div class="svc card">
+          <div class="icon">🚀</div>
+          <h3>Performance</h3>
+          <p class="muted">Core Web Vitals optimization.</p>
+        </div>
+        <div class="svc card">
+          <div class="icon">📈</div>
+          <h3>SEO & CRO</h3>
+          <p class="muted">Structured data, A/B testing.</p>
+        </div>
+      </div>
+      <div class="tools" data-aos="fade-up">
+        <p class="muted">Tools I use daily</p>
+        <ul class="tool-logos">
+          <li>Figma</li><li>React</li><li>Next.js</li><li>Node</li><li>Vercel</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section container" data-aos="fade-up">
+      <h2>What clients say</h2>
+      <div class="testimonial-wrap">
+        <div class="testimonial" data-aos="fade-up">
+          <p>“Bhryany turned our messy brief into a clean, high‑converting product.”</p>
+          <footer>— Jane Doe, CEO @ Acme</footer>
+        </div>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+          <p>“A rare blend of design taste and engineering discipline.”</p>
+          <footer>— Mark K., Head of Product</footer>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section container" data-aos="fade-up">
+      <h2>Skills</h2>
+      <p>Have talent in the following fields</p>
+      <ul>
+        <li>Web Design</li>
+        <li>Web development</li>
+        <li>Mobile application development</li>
+        <li>UI & UX design</li>
+      </ul>
+    </section> 
+
+    <section class="cta section container" data-aos="zoom-in">
+      <h2>Let's create something amazing together.</h2>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="#contact">Contact Me</a>
+        <a class="btn btn-outline" href="https://calendly.com/" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section container" data-aos="fade-up">
+      <h2>Get in touch</h2>
+      <p class="muted">Have a project in mind? Send a message or book a call.</p>
+      <form id="contact-form" class="contact-form" aria-label="Contact form">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label class="full">Message<textarea name="message" rows="4" required></textarea></label>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <button class="btn btn-ghost" type="button" id="save-pdf">Save as PDF</button>
+        </div>
+      </form>
+      <div class="newsletter">
+        <h3>Join my newsletter</h3>
+        <form id="newsletter-form"><input name="email" type="email" placeholder="you@example.com" required>
+        <button class="btn btn-primary">Subscribe</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#home">Bhryany Nyt</a>
+        <p class="muted">Designing and building products that perform.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <div class="socials">
+          <ul>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Bhryany Nyt. All rights reserved.</p>
+  </footer>
+
+  <!-- sitemap link -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
+  <!-- AOS + main JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script> AOS.init({duration:600,once:true}); </script>
+</body>
+</html>
